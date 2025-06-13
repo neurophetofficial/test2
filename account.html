@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="뉴로핏"> 
+    <meta property="og:image" content="https://i.ibb.co/spHZCmcQ/og.png">
+    <meta property="og:description" content="2016년에 설립된 뉴로핏은 인공지능(AI) 기술 기반으로 ‘진단, 치료 가이드, 치료’ 전 주기에 걸친 뇌 영상 분석 솔루션 및 치료 의료기기를 연구 개발하는 전문기업입니다.">
+    <link rel="icon" href="images/favicon.svg">
+    <title>보유주수 확인 - 뉴로핏</title>
+    <link rel="stylesheet" href="styles.css?v=1">
+    <style>
+    /* 전체 로딩 화면 덮기 */
+    #loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* 로고 이미지 */
+    #loader img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* 스피너: 원형 회전 애니메이션 */
+    .spinner {
+      border: 4px solid #d8d8d8;
+      border-top: 4px solid #ff3333;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 15px;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* 로딩 문구 스타일 */
+    #loader p {
+      font-size: 14px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    /* 처음엔 content 숨김 */
+    #content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+            <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/favicon.svg" alt="로고" class="logo">
+            </a>
+        </div>
+    </header>
+
+<section class="hero-section">
+  <div class="hero-overlay">
+    <h1 id="welcomeText">보유주식 확인 페이지</h1>
+  </div>
+</section>
+
+<section class="neurophet-section">
+  <div class="neurophet-container">
+    <h3 class="title-mid">Neurophet</h3>
+    <h2 class="title-large">보유주수 확인</h2>
+    <p class="title-small">뉴로핏이 코스닥에 상장합니다</p>
+    <p class="title-xsmall">
+      뉴로핏은 뇌 질환 진단 및 치료 인공지능(AI) 전문기업으로, 뇌 영상 분석 기술을 보유하고 있습니다.
+    </p>
+
+<div class="tag-boxes">
+  <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250529000613" target="_blank" class="tag-line-link">
+    <div class="tag-line">
+      <div class="tag-gray">증권신고서</div>
+      <span>증권신고서(지분증권) 보러가기</span>
+    </div>
+  </a>
+  
+  <a href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250404003434" target="_blank" class="tag-line-link">
+    <div class="tag-line">
+      <div class="tag-gray">감사보고서</div>
+      <span>감사보고서(2024.12) 보러가기</span>
+    </div>
+  </a>
+</div>
+
+
+    <div class="grid-outline-boxes">
+      <div class="outline-box">Neurophet AQUA</div>
+      <div class="outline-box">Neurophet SCALE PET</div>
+      <div class="outline-box">Neurophet tES LAB</div>
+      <div class="outline-box">Neurophet innk</div>
+    </div>
+
+    <p class="footnote">* 하단으로 스크롤해 주시기 바랍니다.</p>
+  </div>
+  <!-- 여기에 이미지 포함 -->
+  <div class="section-transition">
+    <img src="images/SubtopSolution_bg_04.png" alt="transition" />
+  </div>
+</section>
+
+
+
+<section class="user-info-section" style="background-image: url('images/sec_01_bg_01.png'); background-size: cover; background-position: center; padding: 40px; color: #fff;">
+
+  <div class="info-block reveal">
+    <div class="icon">
+      <img src="images/sec_01_img_01.png" alt="고객 정보 아이콘" />
+    </div>
+    <div class="info-text reveal">
+      <h3>고객 정보</h3>
+      <p><span class="label">성함</span><br /><span class="value" id="userName">—</span></p>
+      <p><span class="label">배정예정계좌</span><br /><span class="value"><span id="userCombo">—</span> <span id="userAccount">—</span></span></p>
+    </div>
+  </div>
+
+  <div class="info-block reveal">
+    <div class="icon">
+      <img src="images/sec_01_img_02.png" alt="보유주식 정보 아이콘" />
+    </div>
+    <div class="info-text">
+      <h3>보유주식정보</h3>
+      <p><span class="label">보유수량</span><br /><span class="value" id="sharesOwned">—</span>주</p>
+      <p><span class="label">총평가금액</span><br /><span class="value" id="totalValue">—</span>원</p>
+    </div>
+  </div>
+
+  <div class="info-block reveal">
+    <div class="icon">
+      <img src="images/sec_01_img_03.png" alt="보증 내역 아이콘" />
+    </div>
+    <div class="info-text">
+      <h3>보증내역</h3>
+      <p><span class="label">플랫폼</span><br /><span class="value">이폼사인</span></p>
+    </div>
+  </div>
+
+</section>
+
+<section class="point-section">
+  <div class="point-block">
+    <p class="point-label reveal">Point 01</p>
+    <h2 class="point-title reveal">공모 일정 안내</h2>
+    <img src="images/sec_02_img_01.png" alt="다양한 PET tracer 분석 이미지" class="point-image reveal" />
+    <h3 class="point-subtitle reveal">기관투자자 수요예측 및 코스닥 상장 과정</h3>
+    <p class="point-desc reveal">
+      뉴로핏은 2025년 7월 4일부터 10일까지 기관투자자 대상 수요예측을 진행하며, 7월 15일과 16일 양일간 일반 투자자를 위한 청약을 실시합니다. 더불어 구주권 배정 절차까지 상장 주관사인 미래에셋증권과 이폼사인, 예탁결제원 등의 파트너십을 통해 안정적인 공모절차를 지원합니다.
+    </p>
+    <hr class="point-divider reveal" />
+  </div>
+
+  <div class="point-block">
+    <p class="point-label reveal">Point 02</p>
+    <h2 class="point-title reveal">공모 자금 활용 계획</h2>
+    <img src="images/sec_02_img_02.png" alt="자동화 전처리 이미지" class="point-image reveal" />
+    <h3 class="point-subtitle reveal">제품 고도화 및 글로벌 시장 확대 투자</h3>
+    <p class="point-desc reveal">
+      공모를 통해 유입될 약 224억 원의 자금 중 약 196억 원은 2028년까지 AI 기반 뇌 영상 분석 솔루션의 고도화와 신규 제품 개발에 집중 투입됩니다. 나머지 약 28억 원은 영업채널 확장과 마케팅 강화에 사용되어 글로벌 경쟁력을 높일 예정입니다.
+    </p>
+    <hr class="point-divider reveal" />
+  </div>
+
+  <div class="point-block">
+    <p class="point-label reveal">Point 03</p>
+    <h2 class="point-title reveal">시장 선도 전략</h2>
+    <img src="images/sec_02_img_03.png" alt="보고서 자동화 이미지" class="point-image reveal" />
+    <h3 class="point-subtitle reveal">ARIA 데이터셋 기반 항아밀로이드 치료제 영상 분석 시장 선점</h3>
+    <p class="point-desc reveal">
+      뉴로핏은 항아밀로이드 치료제 핵심 개발사와 협력해 확보한 대규모 ARIA(부작용 영상) 데이터셋을 검증하고 고도화하여, 정밀한 치료제 부작용 모니터링 솔루션을 제공함으로써 영상 분석 및 동반진단 시장을 선도할 계획입니다.
+    </p>
+    <hr class="point-divider reveal" />
+  </div>
+</section>
+
+
+
+
+    <footer class="footer">
+  <!-- 로고는 단독 상단 -->
+<div class="footer-logo-wrap">
+  <a href="index.html">
+    <img src="images/logo.svg" alt="Neurophet Logo" class="footer-logo" />
+  </a>
+</div>
+
+  <!-- 그 아래 좌우 2단 구성 -->
+  <div class="footer-content">
+    <div class="footer-left">
+      <address class="footer-address">
+        서울 강남구 테헤란로 124, 삼원타워 12F<br />
+      </address>
+      <a href="mailto:cooperation@neurophet.com" class="footer-email">cooperation@neurophet.com</a>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-icons">
+        <a href="https://www.youtube.com/channel/UC9nUVNLs8wjntDPT1yKIE3Q?view_as=subscriber" target="_blank" rel="noopener noreferrer">
+          <img src="images/youtube.svg" alt="youtube" />
+        </a>
+        <a href="https://blog.naver.com/neurophet" target="_blank" rel="noopener noreferrer">
+          <img src="images/naver.svg" alt="naver" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/medium.svg" alt="medium" />
+        </a>
+        <a href="https://linkedin.com/company/neurophet" target="_blank" rel="noopener noreferrer">
+          <img src="images/linked.svg" alt="LinkedIn" />
+        </a>
+      </div>
+      <p class="footer-text">Copyright 2025. Neurophet. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- 로딩 화면 -->
+  <div id="loader">
+    <img src="images/logo.svg" alt="Neurophet Logo" />
+    <div class="spinner"></div>
+    <p>정보를 불러오고 있습니다...</p>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      // 2초 후에 로딩화면 숨기고 본문 보이기
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+      }, 2000);
+    });
+  </script>
+
+<script>
+async function loadUserData() {
+  const userData = sessionStorage.getItem('userData');
+  if (!userData) {
+    alert('접근 권한이 없습니다.');
+    window.location.href = 'index.html';
+    return;
+  }
+
+  try {
+    const user = JSON.parse(userData);
+
+    // 💡 id로 직접 접근해서 텍스트 채우기
+    document.getElementById('userName').textContent    = user.name;
+    document.getElementById('userCombo').textContent   = user.combo;
+    document.getElementById('userAccount').textContent = user.account;
+    document.getElementById('sharesOwned').textContent = `${user.sharesOwned}`;
+    document.getElementById('totalValue').textContent  = `${(user.stockPrice * user.sharesOwned).toLocaleString()}`;
+
+    // 선택사항: 주당 가격 보여주고 싶으면 주석 해제
+    // document.getElementById('stockPrice').textContent = `${user.stockPrice.toLocaleString()}원`;
+
+    // 환영 메시지 있을 경우
+    const welcome = document.getElementById('welcomeText');
+    if (welcome) {
+      welcome.textContent = `${user.name}님, 안녕하세요`;
+    }
+
+  } catch (err) {
+    console.error(err);
+    alert('데이터 처리 중 오류가 발생했습니다.');
+  }
+}
+
+loadUserData();
+
+// 스크롤 시 요소 등장 애니메이션 처리
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal');
+      const windowHeight = window.innerHeight;
+      reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 150; // 조정 가능
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add('visible');
+        } else {
+          el.classList.remove('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>

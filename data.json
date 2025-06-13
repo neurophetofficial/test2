@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": "1",
+      "combo": "== 선택 ==",
+      "account": "1",
+      "stockPrice": 14000,
+      "sharesOwned": 500
+    },
+    {
+      "name": "김민지",
+      "combo": "토스증권",
+      "account": "1234567890",
+      "stockPrice": 14000,
+      "sharesOwned": 5
+    }
+  ]
+}

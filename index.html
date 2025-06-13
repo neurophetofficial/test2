@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="뉴로핏"> 
+    <meta property="og:image" content="https://i.ibb.co/spHZCmcQ/og.png">
+    <meta property="og:description" content="2016년에 설립된 뉴로핏은 인공지능(AI) 기술 기반으로 ‘진단, 치료 가이드, 치료’ 전 주기에 걸친 뇌 영상 분석 솔루션 및 치료 의료기기를 연구 개발하는 전문기업입니다.">
+    <link rel="icon" href="images/favicon.svg">
+    <title>뉴로핏</title>
+    <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+
+        <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/favicon.svg" alt="로고" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <main class="main-hero">
+    <h1 class="hero-line hero-line-1">The Pioneer in</h1>
+    <h1 class="hero-line hero-line-2">Brain Frontiers</h1>
+</main>
+
+<section class="video-section">
+  <video class="main-video"
+         autoplay="true"
+         muted="true"
+         loop
+         playsinline
+         playsinline="true"
+         webkit-playsinline="true">
+    <source src="images/visual_video_01.webm" type="video/webm">
+    브라우저가 비디오 태그를 지원하지 않습니다.
+  </video>
+</section>
+
+
+<!-- 로그인 섹션 -->
+<section class="login-section">
+  <div class="login-title-box">
+    <h2 class="login-title">보유주수 확인</h2>
+
+    <!-- 올라가는 텍스트 애니메이션 -->
+<div class="scroll-text-wrapper">
+  <ul class="scroll-text-list" id="animatedText">
+    <li class="active">KOSDAQ 상장</li>
+    <li>뇌 AI 솔루션 IPO</li>
+    <li>시가총액 1,606억원</li>
+    <li>혁신의료기술 선정</li>
+  </ul>
+</div>
+
+  <form id="loginForm" class="login-form">
+    <!-- 이름 입력 필드 -->
+    <div class="input-container">
+      <label for="name" class="input-label">성함 *</label>
+      <input
+        id="name"
+        type="text"
+        placeholder="성함을 입력해 주세요"
+        class="input-field"
+        required
+      />
+    </div>
+
+    <!-- 증권사 콤보 선택 필드 -->
+    <div class="input-container">
+      <label for="combo" class="input-label">증권사 *</label>
+      <select id="combo" class="input-field" required>
+        <option value="== 선택 ==">== 선택 ==</option>
+        <option value="토스증권">토스증권</option>
+        <option value="카카오페이증권">카카오페이증권</option>
+        <option value="미래에셋증권">미래에셋증권</option>
+        <option value="키움증권">키움증권</option>
+        <option value="한국투자증권">한국투자증권</option>
+        <option value="신한투자증권">신한투자증권</option>
+        <option value="삼성증권">삼성증권</option>
+        <option value="KB증권">KB증권</option>
+        <option value="NH투자증권">NH투자증권</option>
+        <option value="나무증권">나무증권</option>
+        <option value="유안타증권">유안타증권</option>
+        <option value="대신증권">대신증권</option>
+        <option value="IBK투자증권">IBK투자증권</option>
+        <option value="하나증권">하나증권</option>
+        <option value="한화투자증권">한화투자증권</option>
+        <option value="유진투자증권">유진투자증권</option>
+        <option value="아이엠증권">아이엠증권</option>
+        <option value="교보증권">교보증권</option>
+        <option value="메리츠증권">메리츠증권</option>
+        <option value="SK증권">SK증권</option>
+        <option value="LS증권">LS증권</option>
+        <option value="현대차증권">현대차증권</option>
+        <option value="DB금융투자증권">DB금융투자증권</option>
+        <option value="우리투자증권">우리투자증권</option>
+        <option value="신영증권">신영증권</option>
+        <option value="다올투자증권">다올투자증권</option>
+        <option value="케이프투자증권">케이프투자증권</option>
+        <option value="BNK투자증권">BNK투자증권</option>
+        <option value="부국증권">부국증권</option>
+        <option value="상상인증권">상상인증권</option>
+      </select>
+    </div>
+
+    <!-- 계좌번호 입력 필드 -->
+    <div class="input-container">
+      <label for="account" class="input-label">계좌번호 *</label>
+      <input
+        id="account"
+        type="tel"
+        pattern="\d+"
+        placeholder="'-' 없이 숫자만 입력해 주세요"
+        class="input-field"
+        required
+      />
+    </div>
+
+    <!-- 동의 체크박스 -->
+    <div class="checkbox-container">
+      <input
+        type="checkbox"
+        id="agree"
+        class="checkbox"
+        required
+      />
+      <label for="agree" class="checkbox-text">
+        증권에 대한 열람 및 등사에 동의합니다.
+      </label>
+    </div>
+
+    <!-- 제출 버튼 -->
+    <button type="submit" class="submit-btn">확 인</button>
+  </form>
+</section>
+
+
+
+<!-- 뉴스 섹션 -->
+<section class="news-section">
+  <div class="news-header">
+    <span class="news-label">Achievement</span>
+<h2 class="news-title">
+  뉴로핏이<br>
+  <span style="font-weight: 800;">바꿔나가는 세상</span>
+</h2>
+    <p class="news-description">
+      뉴로핏은 혁신과 도전으로 세상을 바꿔나가고 있습니다.<br>첨단 의료 AI 기술로 뇌질환을 극복하고 새로운 가치를 만들어 갑니다.
+    </p>
+  </div>
+
+<div class="news-list">
+  <div class="news-item">
+    <a href="https://www.pharmnews.com/news/articleView.html?idxno=260810" target="_blank" rel="noopener">
+      <img src="images/news1.png" alt="뉴스1 썸네일">
+      <div class="news-content">
+        <h3>뉴로핏, ‘개인 맞춤형 tDCS 솔루션’ 혁신의료기술 선정… 7월부터 임상 진료 가능</h3>
+        <time datetime="2025-06-04">2025.06.04</time>
+      </div>
+    </a>
+  </div>
+
+  <div class="news-item">
+    <a href="https://www.pharmnews.com/news/articleView.html?idxno=260724" target="_blank" rel="noopener">
+      <img src="images/news2.png" alt="뉴스2 썸네일">
+      <div class="news-content">
+        <h3>'뇌질환 의료 AI 솔루션' 뉴로핏, 증권신고서 제출...코스닥 상장 본격화</h3>
+        <time datetime="2025-05-30">2025.05.30</time>
+      </div>
+    </a>
+  </div>
+
+  <div class="news-item">
+    <a href="https://www.newsis.com/view/NISX20250521_0003183667" target="_blank" rel="noopener">
+      <img src="images/news3.jpeg" alt="뉴스3 썸네일">
+      <div class="news-content">
+        <h3>뉴로핏, 美 신경방사선학회 참가… '뉴로핏 아쿠아 AD' 임상 유용성 사례 소개</h3>
+        <time datetime="2025-05-21">2025.05.21</time>
+      </div>
+    </a>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- 솔루션 섹션 -->
+<section class="solution-section">
+  <div class="solution-header">
+    <span class="solution-label">Solution</span>
+    <h2 class="solution-title">
+      뇌질환 진단부터 치료까지<br>
+      <span style="font-weight: 800;">전 주기를 아우르는 뉴로핏 AI 솔루션</span>
+    </h2>
+    <p class="solution-description">
+      뉴로핏은 AI 기반으로 뇌질환 전 주기에 걸친 뇌 영상 분석 AI 솔루션을 보유하고 있습니다. <br>한층 더 진보된 AI 솔루션으로 뇌 질환 영상 분석, 치료 계획, 치료제 효과 분석 및 모니터링, 임상 연구 영상 분석 등 다양한 분야에서 정확하고 일관성 있는 결과를 제공합니다.
+    </p>
+  </div>
+
+  <div class="solution-list">
+    <div class="solution-item">
+      <div class="solution-text">
+        <h3>Neuro Degeneration</h3>
+        <p>퇴행성 뇌질환 제품군</p>
+      </div>
+      <img src="images/sec_03_img_01.svg" alt="Neuro Degeneration">
+    </div>
+
+    <div class="solution-item">
+      <div class="solution-text">
+        <h3>Neuro Modulation</h3>
+        <p>신경조절 치료 제품군</p>
+      </div>
+      <img src="images/sec_03_img_03.svg" alt="Neuro Modulation">
+    </div>
+
+    <div class="solution-item">
+      <div class="solution-text">
+        <h3>Neuro Vascular</h3>
+        <p>뇌혈관 질환 제품군</p>
+      </div>
+      <img src="images/sec_03_img_02.png" alt="Neuro Vascular">
+    </div>
+  </div>
+</section>
+
+
+<section class="partner-section">
+        <span class="solution-label">Business Network</span>
+    <h2 class="solution-title">
+      뇌질환 의료 기술의<br>
+      <span style="font-weight: 800;">혁신을 함께합니다</span>
+    </h2>
+    <p class="solution-description">
+      글로벌 기업, 국내외 의료 AI 전문가와의 파트너십으로 의료 기술의 혁신을 추구합니다.
+    </p>
+<div class="partner-header">
+  <h2 class="solution-title">
+    <span style="font-weight: 800; font-size: 20px;">협력사</span>
+  </h2>
+  <div class="partner-btn-wrap">
+    <button class="partner-btn prev"><img src="images/left_arrow.png" alt="이전"></button>
+    <button class="partner-btn next"><img src="images/right_arrow.png" alt="다음"></button>
+  </div>
+</div>
+
+    <!-- 뷰포트 -->
+<div class="partner-viewport">
+  <ul class="partner-list">
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner1.png" alt="partner1">
+      </div>
+      <p>Eformsign</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner2.svg" alt="partner2">
+      </div>
+      <p>Department of Radiology, University of Washington</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner3.svg" alt="partner3">
+      </div>
+      <p>Nanyang Technological University Singapore</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner4.svg" alt="partner4">
+      </div>
+      <p>Sun Yat-sen University Hospital</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner5.svg" alt="partner5">
+      </div>
+      <p>FST</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner6.svg" alt="partner6">
+      </div>
+      <p>BrainBox</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner7.svg" alt="partner7">
+      </div>
+      <p>Hokuyaku Takeyama Holdings</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner8.svg" alt="partner8">
+      </div>
+      <p>LADO Tech</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner9.svg" alt="partner9">
+      </div>
+      <p>QT Instruments</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner10.svg" alt="partner10">
+      </div>
+      <p>Doctor Net</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner11.svg" alt="partner11">
+      </div>
+      <p>Meridian Healthcare</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner12.svg" alt="partner12">
+      </div>
+      <p>HealthCare Konnect</p>
+    </li>
+    <li class="partner-item">
+      <div class="logo-box">
+        <img src="images/partner13.svg" alt="partner13">
+      </div>
+      <p>CARPL</p>
+    </li>
+  </ul>
+</div>
+</section>
+
+
+<!-- 학회/이벤트 섹션 -->
+<section class="event-section">
+  <span class="solution-label">Conference</span>
+  <div class="event-header">
+    <h2 class="event-title">학회 및 전시회 소식</h2>
+  </div>
+<div class="description-and-buttons">
+  <p class="solution-description">
+    전 세계 의료진및 연구진, 업계 관계자와 최신 연구 개발, 비즈니스 현황을 공유하고 네트워크를 만들어 갑니다.
+  </p>
+  <div class="event-buttons">
+    <button class="event-btn prev"><img src="images/left_arrow.png" alt="Prev"></button>
+    <button class="event-btn next"><img src="images/right_arrow.png" alt="Next"></button>
+  </div>
+</div>
+
+  <div class="event-viewport">
+    <ul class="event-list">
+      <li class="event-item">
+        <div class="event-img">
+          <img src="images/signmou.png" alt="Event 1">
+        </div>
+        <div class="event-info">
+          <h3 class="event-title-main">뉴로핏-이폼사인 MOU 체결</h3>
+          <p class="event-subtext">공모 진행 및 증권 배정 전자서명화</p>
+          <div class="event-tag">IR/IPO</div>
+        </div>
+      </li>
+
+      <li class="event-item">
+        <div class="event-img">
+          <img src="images/bdb3adbe-9266-43aa-8833-3ebff9128871.jpeg" alt="Event 2">
+        </div>
+        <div class="event-info">
+          <h3 class="event-title-main">JSN 2025</h3>
+          <p class="event-subtext">2025.05.21 ~ 2025.05.24</p>
+          <div class="event-tag">K20</div>
+        </div>
+      </li>
+
+      <li class="event-item">
+        <div class="event-img">
+          <img src="images/3ea355e0-ac78-40e8-b954-948272613e74.jpeg" alt="Event 3">
+        </div>
+        <div class="event-info">
+          <h3 class="event-title-main">ASNR 2025</h3>
+          <p class="event-subtext">2025.05.17 ~ 2025.05.21</p>
+          <div class="event-tag">Booth #103</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <!-- 로고는 단독 상단 -->
+<div class="footer-logo-wrap">
+  <a href="index.html">
+    <img src="images/logo.svg" alt="Neurophet Logo" class="footer-logo" />
+  </a>
+</div>
+
+  <!-- 그 아래 좌우 2단 구성 -->
+  <div class="footer-content">
+    <div class="footer-left">
+      <address class="footer-address">
+        서울 강남구 테헤란로 124, 삼원타워 12F<br />
+      </address>
+      <a href="mailto:cooperation@neurophet.com" class="footer-email">cooperation@neurophet.com</a>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-icons">
+        <a href="https://www.youtube.com/channel/UC9nUVNLs8wjntDPT1yKIE3Q?view_as=subscriber" target="_blank" rel="noopener noreferrer">
+          <img src="images/youtube.svg" alt="youtube" />
+        </a>
+        <a href="https://blog.naver.com/neurophet" target="_blank" rel="noopener noreferrer">
+          <img src="images/naver.svg" alt="naver" />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/medium.svg" alt="medium" />
+        </a>
+        <a href="https://linkedin.com/company/neurophet" target="_blank" rel="noopener noreferrer">
+          <img src="images/linked.svg" alt="LinkedIn" />
+        </a>
+      </div>
+      <p class="footer-text">Copyright 2025. Neurophet. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+    </body>
+</html>
